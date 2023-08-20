@@ -1,15 +1,8 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import {
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-  useLocation,
-  Outlet,
-} from "react-router-dom";
+// import { useEffect, useState } from "react";
+// import axios from "axios";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { UNPROTECTED_PATH, PROTECTED_PATH } from "../constants/path.route";
+import { PROTECTED_PATH } from "../constants/path.route";
 
 const Router = () => {
   return (
