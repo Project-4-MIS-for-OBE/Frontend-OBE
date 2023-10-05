@@ -1,11 +1,9 @@
-// import Router from "./routes/Router";
-// import Dashboard from "./pages/Dashboard";
-import EditUpdateCSO from "./pages/EditUpdateCSO";
+import Router from "./routes/Router";
 function App() {
   return (
     <>
       <div>
-        <EditUpdateCSO />
+        <Router />
       </div>
     </>
   );

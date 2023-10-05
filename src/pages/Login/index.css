@@ -1,0 +1,89 @@
+.decoration-bg1 {
+  width: 35vw;
+  height: 35vw;
+
+  border-radius: 692px;
+  background: #e2e0f3;
+  filter: blur(150px);
+
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.decoration-bg2 {
+  width: 35vw;
+  height: 35vw;
+
+  border-radius: 692px;
+  background: #dce4f2;
+  filter: blur(150px);
+
+  position: fixed;
+  bottom: -10vh;
+  left: 0;
+}
+.login {
+  background: white;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 25px 40px;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.login img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+.OBE-logo {
+  margin: 1rem;
+}
+.login h5 {
+  text-align: center;
+  color: #2b2753;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 38px;
+  margin: 10px;
+}
+.login-btn {
+  cursor: pointer;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  border-radius: 5px;
+  background: linear-gradient(
+      90deg,
+      rgba(237, 242, 248, 0.35) 1.83%,
+      rgba(237, 242, 248, 0) 76.08%
+    ),
+    var(--purple-5-purple, #6869ac);
+  padding: 10px 15px;
+  transition: 0.3s;
+}
+.login-btn:hover {
+  opacity: 0.9;
+}
+.login-btn p {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 0.5rem;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  padding-left: 0.5rem;
+
+  border-left: solid 0.5px #6869ac;
+}
+.cmu-logo {
+  height: 35px;
+  width: 100px;
+  background: #000;
+}

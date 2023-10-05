@@ -1,4 +1,5 @@
 import { Navbar } from "../../component/Navbar";
+
 import "./index.css";
 
 const arr = [1, 2, 3, 4, 5, 6];
@@ -86,13 +87,14 @@ const EditUpdateCSO = () => {
           </div>
         </div>
       </div>
+
       <div className="menuFrame-container">
         <div className="container">
           <div className="topic">
             <h3>วัตถุประสงค์การเรียนรู้ของนักศึกษา (SO : Student outcomes) </h3>
           </div>
           <div style={{ display: "flex" }}>
-            <div className="tableContainer">
+            <div className="tableContainer" style={{ width: "30%" }}>
               <table>
                 <thead>
                   <tr>
@@ -122,7 +124,7 @@ const EditUpdateCSO = () => {
             <div>
               <h3>กำหนด CSO ให้กับ SO</h3>
               <div>
-                <table className="tableContainer">
+                <table className="tableContainer" style={{ width: "70%" }}>
                   <thead>
                     <tr>
                       <th>ลำดับ</th>
