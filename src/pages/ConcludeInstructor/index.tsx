@@ -1,6 +1,11 @@
-import Navbar from "../../component/Navbar";
+import { Navbar } from "../../component/Navbar";
+
 const ConcludeInstructor = () => {
-  return <Navbar />;
+  return (
+    <div>
+      <Navbar />;
+    </div>
+  );
 };
 
 export default ConcludeInstructor;
