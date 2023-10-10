@@ -39,11 +39,12 @@ export const Navbar = () => {
       })} */}
       <div className="navbar">
         <div className="navbar-topic">
-          <div className="CPEOBE-icon"></div>
+          <img src="./src/assets/logo.svg" className="CPEOBE-icon" />
           <h1>CPE OBE</h1>
         </div>
         <div className="navbarUsername">
-          <div className="userIcon"></div>
+          <img src="./src/assets/profile.svg" className="userIcon" />
+
           <div>
             <h5>Name Surname</h5>
             <p>Faculty of Engineering</p>
