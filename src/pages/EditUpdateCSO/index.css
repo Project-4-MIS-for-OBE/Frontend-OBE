@@ -1,8 +1,8 @@
-.menuFrame-container.top {
+.edit.menuFrame-container.top {
   margin-top: 50px;
   padding-top: 40px;
 }
-.menuFrame-container.bottom {
+.edit.menuFrame-container.bottom {
   margin-bottom: 50px;
 }
 .container {
@@ -26,14 +26,12 @@
 .flex {
   display: flex;
 }
-.subject-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #95afd7;
+.addeditscore-icon {
+  display: flex;
 }
-.lineInTable {
+.edit.lineInTable {
   width: 100%;
+  border-left: 1 solid #d9d9d9;
   border-bottom: 1px solid #d9d9d9;
 }
 .subtextColor {
