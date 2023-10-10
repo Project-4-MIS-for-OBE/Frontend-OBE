@@ -26,7 +26,7 @@ const CourseList = ({ data, instructor, status }: CourseListProps) => {
   return (
     <div className="container">
       <div className="flex">
-        <div className="subject-icon"></div>
+        <img src="./src/assets/subject.svg" className="subject-icon" />
         <h3>วิชาที่อยู่ในการดูแล</h3>
       </div>
       <div className="flex filter">

@@ -5,7 +5,7 @@
 .menuFrame-container.bottom {
   margin-bottom: 50px;
 }
-.container {
+.container-2 {
   margin-left: auto;
   margin-right: auto;
 
@@ -16,7 +16,7 @@
   border-radius: 15px;
 }
 
-.topic {
+.topic-2 {
   width: 350px;
   height: 50px;
   flex-shrink: 0;
@@ -33,20 +33,20 @@
   justify-content: center;
 }
 
-.container h3 {
+.container-2 h3 {
   display: flex;
   justify-content: center; /* Center items vertically */
   margin: 4px 0 0 15px;
   font-size: 22px;
 }
 
-.topic h3 {
+.topic-2 h3 {
   display: flex;
   justify-content: center; /* Center items vertically */
   margin: 4px 0 0 15px;
   font-size: 20px;
 }
-.container h4 {
+.container-2 h4 {
   display: flex;
   justify-content: center; /* Center items vertically */
   margin: 4px 0 0 15px;
@@ -72,8 +72,12 @@
   color: #636363;
 }
 
-.container .chart {
+.container-2 .chart {
   width: 50%;
   display: flex;
   margin: 40px auto auto auto;
+}
+
+.conclude-icon {
+  margin-right: 6px;
 }

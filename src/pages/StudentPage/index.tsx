@@ -7,13 +7,17 @@ const StudentPage = () => {
     <div>
       <Navbar />
       <div className="menuFrame-container top">
-        <div className="container">
+        <div className="container-2">
           <h3>สรุปผลคะแนนประเมินวัตถุประสงค์การเรียนรู้ (SO)</h3>
-          <div className="topic">
+          <div className="topic-2">
             <h3>ปีการศึกษา</h3> <h4>2565</h4>
             <h3>ภาคเรียนที่ </h3> <h4>2</h4>
           </div>
-          <p>สรุปคะแนนประเมินวัตถุประสงค์การเรียนรูั (SO) รวมทุกวิชา </p>
+
+          <div className="flex">
+            <img src="./src/assets/conclude.svg" className="conclude-icon" />
+            <h6>สรุปคะแนนประเมินวัตถุประสงค์การเรียนรูั (SO) รวมทุกวิชา </h6>
+          </div>
 
           <div className="tableContainer">
             <table>
@@ -38,7 +42,7 @@ const StudentPage = () => {
           </div>
         </div>
         <div className="container">
-          <p>สรุปคะแนนประเมินวัตถุประสงค์การเรียนรูั (SO) รวมทุกวิชา </p>
+          <h6>สรุปคะแนนประเมินวัตถุประสงค์การเรียนรูั (SO) รวมทุกวิชา </h6>
         </div>
       </div>
     </div>

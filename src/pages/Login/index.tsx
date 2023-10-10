@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <div>
       <div className="login">
-        <img src="./src/assets/icon.svg" className="OBE-logo" />
+        <img src="./src/assets/logo.svg" className="OBE-logo" />
         <h5>Log in to CPE OBE</h5>
         <div onClick={navigateToDashBoard} className="login-btn">
           <img src="./src/assets/CMU SUB-LOGO.svg" />
