@@ -8,20 +8,24 @@ interface Data {
 const HeaderProp = ({ Header }: Data) => {
   return (
     <thead>
-      <tr>
+      <tr className="outsideHeader">
         {Header.map((header, index) =>
           header.subTopic === undefined ? (
-            <th key={index}>{header.mainTopic}</th>
+            <th key={index} className="headerTH">
+              {header.mainTopic}
+            </th>
           ) : (
-            <th key={index}>
-              <table>
+            <th key={index} className="headerTH">
+              <table className="insideTable">
                 <thead>
-                  <tr>
+                  <tr className="insideHeader headerTH">
                     <th colSpan={header.subTopic.length}>{header.mainTopic}</th>
                   </tr>
-                  <tr>
+                  <tr className="insideHeader subHeaderTH">
                     {header.subTopic.map((subTopic, key) => (
-                      <th key={key}>{subTopic}</th>
+                      <th key={key} className="subHeaderTH">
+                        {subTopic}
+                      </th>
                     ))}
                   </tr>
                 </thead>

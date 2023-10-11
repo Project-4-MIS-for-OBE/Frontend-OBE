@@ -17,14 +17,16 @@ const Table = ({ Header, Data, selectedIcon }: data) => {
   });
 
   return (
-    <table>
-      <HeaderProp Header={Header} />
-      <DataProps
-        Data={Data}
-        selectedIcon={selectedIcon ?? undefined}
-        numberOfHeader={numberOfHeader}
-      />
-    </table>
+    <div className="tableContainerComponent">
+      <table>
+        <HeaderProp Header={Header} />
+        <DataProps
+          Data={Data}
+          selectedIcon={selectedIcon ?? undefined}
+          numberOfHeader={numberOfHeader}
+        />
+      </table>
+    </div>
   );
 };
 

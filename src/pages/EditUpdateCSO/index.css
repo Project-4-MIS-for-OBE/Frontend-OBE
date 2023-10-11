@@ -1,5 +1,25 @@
+.backHomeNav {
+  position: fixed;
+  display: flex;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  padding: 5px 20px;
+  background: white;
+  box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.1);
+  z-index: 998;
+}
+.backHomeNav p {
+  color: var(--l-hblue-6-l-hblue, #3f6196);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 25.5px;
+
+  margin: 0px 0px 0px 5px;
+}
 .edit.menuFrame-container.top {
-  margin-top: 50px;
+  margin-top: 90px;
   padding-top: 40px;
 }
 .edit.menuFrame-container.bottom {
@@ -60,4 +80,25 @@
   color: white;
   margin: 0;
   font-size: 13px;
+}
+
+.table1 {
+  width: 90%;
+  margin: auto;
+}
+.tableSO {
+  width: 48%;
+}
+.table2 {
+  width: 48%;
+}
+.container-table2 {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin: auto;
+}
+.table3 {
+  margin: auto;
+  width: 90%;
 }

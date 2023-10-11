@@ -1,6 +1,7 @@
 import { Navbar } from "../../component/Navbar";
 import Table from "../../component/Table";
 import useViewModel from "./viewModel";
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import "./index.css";
 
 const EditUpdateCSO = () => {
@@ -14,11 +15,16 @@ const EditUpdateCSO = () => {
     HeaderTable2,
     HeaderTable3,
     HeaderTableSO,
+    navigateToDashBoard,
   } = useViewModel();
 
   return (
     <div>
       <Navbar />
+      <button className="backHomeNav" onClick={navigateToDashBoard}>
+        <ArrowBackIosRoundedIcon style={{ color: "#4F79BC", width: "16px" }} />
+        <p>ย้อนกลับ</p>
+      </button>
       <div className="menuFrame-container top edit">
         <div className="container">
           <div className="topic">
@@ -28,7 +34,7 @@ const EditUpdateCSO = () => {
               Excel เพื่อนำไปกรอกคะแนนของนักศึกษา{" "}
             </p>
           </div>
-          <div className="tableContainer">
+          <div className="table1">
             {EditScoreData && <Table Header={HeaderTable1} Data={dataTable1} />}
           </div>
           <div className="darkbutton">
@@ -42,32 +48,29 @@ const EditUpdateCSO = () => {
           <div className="topic">
             <h3>วัตถุประสงค์การเรียนรู้ของนักศึกษา (SO : Student outcomes) </h3>
           </div>
-          <div style={{ display: "flex" }}>
-            <div className="tableContainer" style={{ width: "40%" }}>
+          <div className="container-table2">
+            <div className="tableSO">
               <Table Header={HeaderTableSO} Data={dataTableSO}></Table>
             </div>
-            <div>
-              <h3>กำหนด CSO ให้กับ SO</h3>
-              <div className="tableContainer">
-                <Table
-                  Header={HeaderTable2}
-                  Data={dataTable2}
-                  selectedIcon={true}
-                />
-              </div>
+            <div className="table2">
+              <Table
+                Header={HeaderTable2}
+                Data={dataTable2}
+                selectedIcon={true}
+              />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="menuFrame-container bottom">
+      <div className="menuFrame-container bottom edit">
         <div className="container">
           <div className="topic">
             <h3>วัตถุประสงค์รายวิชา (CSO : Course-Specific Outcomes)</h3>
             <p>อัพโหลดไฟล์คะแนนนักศึกษา .xlsx ที่แก้ไขเรียบร้อยแล้ว </p>
           </div>
           <div>
-            <div className="tableContainer">
+            <div className="table3">
               <Table Header={HeaderTable3} Data={dataTable3}></Table>
             </div>
           </div>
