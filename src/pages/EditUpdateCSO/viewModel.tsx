@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import EditScore from "../../data/EditScore.json";
+import { useNavigate } from "react-router-dom";
+import { PROTECTED_PATH } from "../../constants/path.route";
 
 const useViewModel = () => {
   const [EditScoreData, setEditScoreData] = useState<any | undefined>(
@@ -112,7 +114,11 @@ const useViewModel = () => {
     };
     fetchData();
   });
+  const navigate = useNavigate();
 
+  const navigateToDashBoard = () => {
+    navigate(PROTECTED_PATH.INSTRUCTOR_SUBJECT, { replace: false });
+  };
   return {
     EditScoreData,
     dataTable1,
@@ -123,6 +129,7 @@ const useViewModel = () => {
     HeaderTable2,
     HeaderTable3,
     HeaderTableSO,
+    navigateToDashBoard,
   };
 };
 
