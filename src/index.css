@@ -48,4 +48,12 @@
   input[type="file"] {
     display: none;
   }
+  button {
+    cursor: pointer;
+  }
+  .menuFrame-container {
+    margin-top: 70px;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
 }

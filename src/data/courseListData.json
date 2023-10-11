@@ -1,0 +1,42 @@
+{
+  "instructorName": "Chinnissai Surname",
+  "instructorCourse": [
+    {
+      "courseNo": "261261",
+      "section": ["001", "801"],
+      "courseTitle": "Discrete Math",
+      "coopInstrunction": [["instrucname1", "instrucname2"], ["instrucname1"]],
+      "status": "Waiting"
+    },
+    {
+      "courseNo": "261100",
+      "section": ["001", "002", "003", "801"],
+      "courseTitle": "Course Name",
+      "coopInstrunction": [["instrucname1"]],
+      "status": "Inprogress"
+    },
+    {
+      "courseNo": "261547",
+      "section": ["001"],
+      "courseTitle": "Course Name",
+      "coopInstrunction": [["instrucname1", "instrucname2"]],
+      "status": "Success"
+    }
+  ],
+  "relevantCourse": [
+    {
+      "courseNo": "261261",
+      "section": ["701"],
+      "courseTitle": "Discrete Math",
+      "instructorName": "Name Surname",
+      "coopInstrunction": [["instrucname1", "instrucname1"]]
+    },
+    {
+      "courseNo": "261547",
+      "section": ["801"],
+      "courseTitle": "Course Name",
+      "instructorName": "Name Surname",
+      "coopInstrunction": [["instrucname1"]]
+    }
+  ]
+}

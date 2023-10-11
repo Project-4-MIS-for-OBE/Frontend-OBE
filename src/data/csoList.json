@@ -1,0 +1,45 @@
+{
+  "tableData": [
+    {
+      "rowNumber": 1,
+      "data": [
+        {
+          "columnNumber": 1,
+          "columnData": ["Lorem ipsum dolor sit amet."]
+        },
+        {
+          "columnNumber": 2,
+          "columnData": ["Lorem ipsum dolor sit amet."]
+        },
+        {
+          "columnNumber": 3,
+          "columnData": ["Lorem ipsum dolor sit amet."]
+        }
+      ]
+    },
+    {
+      "rowNumber": 2,
+      "data": [
+        {
+          "columnNumber": 1,
+          "columnData": ["คะแนนควิซ1", "คะแนนควิซ2"]
+        },
+        {
+          "columnNumber": 2,
+          "columnData": ["คะแนนสอบ Midterm"]
+        },
+        {
+          "columnNumber": 3,
+          "columnData": ["คะแนนสอบ Final"]
+        }
+      ]
+    }
+  ],
+  "tableTopic": [
+    "ลำดับ",
+    "คำอธิบาย CSO",
+    "คะแนนที่ใช้ในการวัดผล CSO",
+    "คะแนนเต็ม",
+    "น้ำหนักคะแนน"
+  ]
+}

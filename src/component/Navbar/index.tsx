@@ -1,32 +1,32 @@
 import "./index.css";
-import useViewModel from "./viewModel";
+// import useViewModel from "./viewModel";
 
-import { PROTECTED_PATH } from "../../constants/path.route";
-import { useLocation } from "react-router-dom";
+// import { PROTECTED_PATH } from "../../constants/path.route";
+// import { useLocation } from "react-router-dom";
 
-interface MenuTemplatesProps {
-  label: string;
-  // icon: React.ReactElement<SvgIconProps>;
-  case: string;
-  route: string;
-}
-const menuTemplates: MenuTemplatesProps[] = [
-  {
-    label: "Dashboard",
-    case: "instructor-subject",
-    route: PROTECTED_PATH.INSTRUCTOR_SUBJECT,
-  },
-  {
-    label: "Edit Score",
-    case: "edit-point",
-    route: PROTECTED_PATH.EDIT_POINT,
-  },
-  {
-    label: "Conclude",
-    case: "instructor-conclude",
-    route: PROTECTED_PATH.INSTRUCTOR_CONCLUDE,
-  },
-];
+// interface MenuTemplatesProps {
+//   label: string;
+//   icon: React.ReactElement<SvgIconProps>;
+//   case: string;
+//   route: string;
+// }
+// const menuTemplates: MenuTemplatesProps[] = [
+//   {
+//     label: "Dashboard",
+//     case: "instructor-subject",
+//     route: PROTECTED_PATH.INSTRUCTOR_SUBJECT,
+//   },
+//   {
+//     label: "Edit Score",
+//     case: "edit-point",
+//     route: PROTECTED_PATH.EDIT_POINT,
+//   },
+//   {
+//     label: "Conclude",
+//     case: "instructor-conclude",
+//     route: PROTECTED_PATH.INSTRUCTOR_CONCLUDE,
+//   },
+// ];
 
 export const Navbar = () => {
   // const { onSideNavClick } = useViewModel();
