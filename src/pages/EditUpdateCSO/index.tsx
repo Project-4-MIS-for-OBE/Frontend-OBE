@@ -28,7 +28,14 @@ const EditUpdateCSO = () => {
       <div className="menuFrame-container top edit">
         <div className="container">
           <div className="topic">
-            <h3>Add / Edit Score </h3>
+            <div className="flex">
+              <img
+                src="./src/assets/addeditscore.svg"
+                className="addeditscore-icon"
+              />
+              <h3>Add / Edit Score </h3>
+            </div>
+
             <p>
               กรอกและแก้ไขคะแนนที่จะใช้สำหรับวัดเกณฑ์ CSO จากนั้นบันทึกเป็นไฟล์
               Excel เพื่อนำไปกรอกคะแนนของนักศึกษา{" "}
@@ -46,7 +53,12 @@ const EditUpdateCSO = () => {
       <div className="menuFrame-container">
         <div className="container">
           <div className="topic">
-            <h3>วัตถุประสงค์การเรียนรู้ของนักศึกษา (SO : Student outcomes) </h3>
+            <div className="flex">
+              <img src="./src/assets/soicon.svg" className="so-icon" />
+              <h3>
+                วัตถุประสงค์การเรียนรู้ของนักศึกษา (SO : Student outcomes){" "}
+              </h3>
+            </div>
           </div>
           <div className="container-table2">
             <div className="tableSO">

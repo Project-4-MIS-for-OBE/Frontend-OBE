@@ -1,0 +1,83 @@
+.menuFrame-container.top {
+  margin-top: 50px;
+  padding-top: 40px;
+}
+.menuFrame-container.bottom {
+  margin-bottom: 50px;
+}
+.container-2 {
+  margin-left: auto;
+  margin-right: auto;
+
+  height: fit-content;
+  width: 90%;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+}
+
+.topic-2 {
+  width: 350px;
+  height: 50px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  border: 1px solid var(--l-hblue-2-lb, #b9c9e4);
+  background: var(--white-0-white, #fff);
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.15);
+  font-family: Prompt;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-2 h3 {
+  display: flex;
+  justify-content: center; /* Center items vertically */
+  margin: 4px 0 0 15px;
+  font-size: 22px;
+}
+
+.topic-2 h3 {
+  display: flex;
+  justify-content: center; /* Center items vertically */
+  margin: 4px 0 0 15px;
+  font-size: 20px;
+}
+.container-2 h4 {
+  display: flex;
+  justify-content: center; /* Center items vertically */
+  margin: 4px 0 0 15px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 31.5px;
+}
+
+.flex {
+  display: flex;
+}
+.subject-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #95afd7;
+}
+.lineInTable {
+  width: 100%;
+  border-bottom: 1px solid #d9d9d9;
+}
+.subtextColor {
+  color: #636363;
+}
+
+.container-2 .chart {
+  width: 50%;
+  display: flex;
+  margin: 40px auto auto auto;
+}
+
+.conclude-icon {
+  margin-right: 6px;
+}

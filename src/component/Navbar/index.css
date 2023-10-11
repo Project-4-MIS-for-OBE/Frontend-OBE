@@ -30,7 +30,6 @@
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background: white;
 }
 .navbar h1 {
   margin: 1px 0 0 15px;
@@ -46,13 +45,8 @@
   align-items: center;
 }
 .userIcon {
-  width: 20px;
-  height: 20px;
-  border-radius: 6px;
-  border: 2px solid #4f79bc;
-  opacity: 0.5;
-  background: #4f79bc;
-  margin-right: 8px;
+  margin-right: 12px;
+  margin-left: 5px;
 }
 .navbarUsername h5 {
   font-family: Prompt;
