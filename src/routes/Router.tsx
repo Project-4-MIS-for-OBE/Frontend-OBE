@@ -9,6 +9,27 @@ import StudentPage from "../pages/StudentPage";
 import Callback from "../pages/Callback";
 import { useContext } from "react";
 import UserInfoContext from "../contexts/userContext";
+import { CmuOAuthBasicInfo } from "../types";
+
+interface ICustomRoute {
+	user?: CmuOAuthBasicInfo | null;
+	redirectPath: string;
+	children: JSX.Element;
+}
+
+const ProtectRoute = ({ user, redirectPath, children }: ICustomRoute) => {
+	if (user) {
+		return children;
+	}
+	return <Navigate to={redirectPath} replace />;
+};
+
+const PublicRoute = ({ user, redirectPath, children }: ICustomRoute) => {
+	if (!user) {
+		return children;
+	}
+	return <Navigate to={redirectPath} replace />;
+};
 const Router = () => {
 	const { userInfo } = useContext(UserInfoContext);
 	return (
@@ -19,11 +40,12 @@ const Router = () => {
 						<Route
 							path={UNPROTECTED_PATH.LOGIN}
 							element={
-								userInfo !== null ? (
-									<Navigate to={PROTECTED_PATH.INSTRUCTOR_SUBJECT} />
-								) : (
+								<PublicRoute
+									user={userInfo}
+									redirectPath={PROTECTED_PATH.INSTRUCTOR_SUBJECT}
+								>
 									<Login />
-								)
+								</PublicRoute>
 							}
 						/>
 					</Route>
@@ -31,28 +53,56 @@ const Router = () => {
 					<Route>
 						<Route
 							path={PROTECTED_PATH.INSTRUCTOR_SUBJECT}
-							element={<Dashboard />}
+							element={
+								<ProtectRoute
+									user={userInfo}
+									redirectPath={UNPROTECTED_PATH.LOGIN}
+								>
+									<Dashboard />
+								</ProtectRoute>
+							}
 						/>
 					</Route>
 
 					<Route>
 						<Route
 							path={PROTECTED_PATH.EDIT_POINT}
-							element={<EditUpdateCSO />}
+							element={
+								<ProtectRoute
+									user={userInfo}
+									redirectPath={UNPROTECTED_PATH.LOGIN}
+								>
+									<EditUpdateCSO />
+								</ProtectRoute>
+							}
 						/>
 					</Route>
 
 					<Route>
 						<Route
 							path={PROTECTED_PATH.INSTRUCTOR_CONCLUDE}
-							element={<ConcludeInstructor />}
+							element={
+								<ProtectRoute
+									user={userInfo}
+									redirectPath={UNPROTECTED_PATH.LOGIN}
+								>
+									<ConcludeInstructor />
+								</ProtectRoute>
+							}
 						/>
 					</Route>
 
 					<Route>
 						<Route
 							path={PROTECTED_PATH.STUDENT_CONCLUDE}
-							element={<StudentPage />}
+							element={
+								<ProtectRoute
+									user={userInfo}
+									redirectPath={UNPROTECTED_PATH.LOGIN}
+								>
+									<StudentPage />
+								</ProtectRoute>
+							}
 						/>
 					</Route>
 					<Route>

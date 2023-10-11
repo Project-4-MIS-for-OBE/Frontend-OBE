@@ -1,6 +1,7 @@
 export enum UNPROTECTED_API {
 	ME = "/auth/me",
 	LOGIN = "/auth/signin",
+	LOGOUT = "/auth/signout",
 	VERIFY_JWT = "/auth/verify?token=",
 	CMU_OAUTH = "/auth/oauth_student",
 }

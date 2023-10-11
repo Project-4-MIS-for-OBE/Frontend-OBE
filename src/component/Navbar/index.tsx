@@ -1,6 +1,9 @@
 import { useContext } from "react";
 import "./index.css";
 import UserInfoContext from "../../contexts/userContext";
+import { postUserLogout } from "../../services/user.axios";
+import { useNavigate } from "react-router-dom";
+import { UNPROTECTED_PATH } from "../../constants/path.route";
 // import useViewModel from "./viewModel";
 
 // import { PROTECTED_PATH } from "../../constants/path.route";
@@ -33,13 +36,20 @@ import UserInfoContext from "../../contexts/userContext";
 export const Navbar = () => {
 	// const { onSideNavClick } = useViewModel();
 	// const location = useLocation();
-	const { userInfo } = useContext(UserInfoContext);
+	const { userInfo, setUserInfo } = useContext(UserInfoContext);
+	const navigate = useNavigate();
+
+	const handleLogout = async () => {
+		await postUserLogout();
+		setUserInfo(null);
+		navigate(UNPROTECTED_PATH.LOGIN);
+	};
 	return (
 		<div>
 			{/* {menuTemplates.map((elem: MenuTemplatesProps, key: number) => {
         return <button>{elem.label}</button>;
       })} */}
-			<div className="navbar">
+			<div className="navbar" onClick={handleLogout}>
 				<div className="navbar-topic">
 					<img src="./src/assets/logo.svg" className="CPEOBE-icon" />
 					<h1>CPE OBE</h1>
