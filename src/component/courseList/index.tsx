@@ -2,6 +2,14 @@ import "./index.css";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import VisibilityOutlinedIcon from "@mui/icons-material/VisibilityOutlined";
 import useViewModel from "./viewModel";
+import { useState } from "react";
+import {
+  Select,
+  TextField,
+  MenuItem,
+  InputLabel,
+  FormControl,
+} from "@mui/material";
 type Course = {
   courseNo: string;
   section: string[];
@@ -23,6 +31,16 @@ type StatusObject = {
 const CourseList = ({ data, instructor, status }: CourseListProps) => {
   const { Status, navigateToEditPoint, navigateToConcludeInstructor } =
     useViewModel();
+  const [semesterm, setSemesterm] = useState("");
+
+  const handleSemestermChange = (event: any) => {
+    setSemesterm(event.target.value);
+  };
+  const [year, setYear] = useState("");
+
+  const handleYearChange = (event: any) => {
+    setYear(event.target.value);
+  };
   return (
     <div className="container">
       <div className="flex">
@@ -32,15 +50,50 @@ const CourseList = ({ data, instructor, status }: CourseListProps) => {
       <div className="flex filter">
         <div className="filterContain">
           <h4>ปีการศึกษา</h4>
-          <div className="dropdown">dropdown</div>
+          <FormControl size="small" style={{ width: "125px" }}>
+            <InputLabel id="demo-simple-select-label">ปีการศึกษา</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={year}
+              label="Age"
+              onChange={handleYearChange}
+            >
+              <MenuItem value={1}>2566</MenuItem>
+              <MenuItem value={2}>2565</MenuItem>
+              <MenuItem value={2}>2564</MenuItem>
+              <MenuItem value={2}>2563</MenuItem>
+              <MenuItem value={2}>2562</MenuItem>
+            </Select>
+          </FormControl>
         </div>
+
         <div className="filterContain">
           <h4>เทอม</h4>
-          <div className="dropdown">dropdown</div>
+
+          <FormControl size="small" style={{ width: "125px" }}>
+            <InputLabel id="demo-simple-select-label">เทอม</InputLabel>
+            <Select
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              value={semesterm}
+              label="Semesterm"
+              onChange={handleSemestermChange}
+            >
+              <MenuItem value={1}>1</MenuItem>
+              <MenuItem value={2}>2</MenuItem>
+            </Select>
+          </FormControl>
         </div>
         <div className="filterContain">
           <h4>ค้นหาจากรหัสหรือชื่อวิชา</h4>
-          <div className="dropdown">search</div>
+          <TextField
+            id="outlined-basic"
+            label="ค้นหาจากรหัสหรือชื่อวิชา"
+            variant="outlined"
+            size="small"
+            style={{ width: "350px" }}
+          />
         </div>
       </div>
       <div className="tableContainer">
