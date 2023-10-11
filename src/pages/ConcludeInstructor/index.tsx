@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { Navbar } from "../../component/Navbar";
 import { DoughnutChart } from "../../component/Doughnut";
+import Table from "../../component/Table";
+import useViewModel from "./viewModel";
 import "./index.css";
 
 const ConcludeInstructor: React.FC = () => {
@@ -9,6 +11,8 @@ const ConcludeInstructor: React.FC = () => {
   const toggleChartVisibility = () => {
     setChartVisible(!isChartVisible);
   };
+
+  const { EditScoreData, dataTable1, HeaderTableConclude } = useViewModel();
 
   return (
     <div>
@@ -27,6 +31,11 @@ const ConcludeInstructor: React.FC = () => {
               alt="conclude"
             />
             <h6>สรุปคะแนนประเมินวัตถุประสงค์รายวิชา (CSO) </h6>
+          </div>
+          <div className="tableContainer">
+            {EditScoreData && (
+              <Table Header={HeaderTableConclude} Data={dataTable1} />
+            )}
           </div>
           <div className="toggleconcludeChart" onClick={toggleChartVisibility}>
             <h6>แผนภาพสรุปผลการประเมินและจำนวนนักศึกษา</h6>
