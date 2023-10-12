@@ -1,0 +1,17 @@
+.excelBtn {
+  border-radius: 5px;
+  background: #00175c;
+  border: unset;
+  padding: 5px 20px;
+
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.excelBtn:hover {
+  background: #202e58;
+}
+.excelBtn p {
+  color: white;
+  margin: 0;
+  font-size: 13px;
+}

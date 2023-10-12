@@ -1,5 +1,5 @@
 interface data {
-  Data: string[][][];
+  Data: any[][][];
   numberOfHeader: number[];
   selectedIcon?: boolean;
 }
@@ -22,16 +22,66 @@ const DataProps = ({ Data, selectedIcon, numberOfHeader }: data) => {
               {numberOfHeader[innerIndex + 1] > 1 ? (
                 <table>
                   <tbody>
-                    <tr className="insideData">
+                    <tr
+                      className={
+                        selectedIcon ? "insideData icon" : "insideData noIcon"
+                      }
+                    >
                       {innerArray.map((item, itemIndex) => (
-                        <td key={itemIndex} className="dataTD">
-                          {selectedIcon
-                            ? item === "0"
-                              ? ""
-                              : item === "1"
-                              ? 1
-                              : item
-                            : item}
+                        <td
+                          key={itemIndex}
+                          className={
+                            selectedIcon ? "dataTD icon" : "dataTD noIcon"
+                          }
+                        >
+                          {selectedIcon ? (
+                            item === "0" ? (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                              >
+                                <circle cx="7.5" cy="7.5" r="7.5" />
+                              </svg>
+                            ) : item === "1" ? (
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="15"
+                                height="15"
+                                viewBox="0 0 15 15"
+                                fill="none"
+                              >
+                                <circle
+                                  cx="7.5"
+                                  cy="7.5"
+                                  r="7.5"
+                                  fill="url(#paint0_linear_370_858)"
+                                />
+                                <defs>
+                                  <linearGradient
+                                    id="paint0_linear_370_858"
+                                    x1="7.5"
+                                    y1="0"
+                                    x2="7.5"
+                                    y2="15"
+                                    gradientUnits="userSpaceOnUse"
+                                  >
+                                    <stop stopColor="#4F79BC" />
+                                    <stop
+                                      offset="0.963542"
+                                      stopColor="#5166A1"
+                                    />
+                                  </linearGradient>
+                                </defs>
+                              </svg>
+                            ) : (
+                              item
+                            )
+                          ) : (
+                            item
+                          )}
                         </td>
                       ))}
                     </tr>

@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import EditUpdateCSO from "../pages/EditUpdateCSO";
 import ConcludeInstructor from "../pages/ConcludeInstructor";
 import StudentPage from "../pages/StudentPage";
+import ConcludeError from "../pages/ConcludeError";
 import Callback from "../pages/Callback";
 import { useContext } from "react";
 import UserInfoContext from "../contexts/userContext";
@@ -91,7 +92,12 @@ const Router = () => {
 							}
 						/>
 					</Route>
-
+  <Route>
+            <Route
+              path={PROTECTED_PATH.ERROR_CONCLUDE}
+              element={<ConcludeError />}
+            />
+          </Route>
 					<Route>
 						<Route
 							path={PROTECTED_PATH.STUDENT_CONCLUDE}
@@ -105,12 +111,15 @@ const Router = () => {
 							}
 						/>
 					</Route>
+          
 					<Route>
 						<Route
 							path={UNPROTECTED_PATH.OAUTH_REDIRECT}
 							element={<Callback />}
 						/>
 					</Route>
+          
+          
 				</Routes>
 			</BrowserRouter>
 		</>
