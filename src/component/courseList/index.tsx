@@ -29,6 +29,7 @@ type StatusObject = {
   color: string;
 };
 const CourseList = ({ data, instructor, status }: CourseListProps) => {
+  console.log(data);
   const { Status, navigateToEditPoint, navigateToConcludeInstructor } =
     useViewModel();
   const [semesterm, setSemesterm] = useState("");
@@ -109,7 +110,7 @@ const CourseList = ({ data, instructor, status }: CourseListProps) => {
             </tr>
           </thead>
           <tbody>
-            {data.map((courseData) => {
+            {data?.map((courseData) => {
               const instructorToUse = courseData.instructorName || instructor;
               let status: StatusObject;
               if (courseData.status) {
@@ -118,7 +119,7 @@ const CourseList = ({ data, instructor, status }: CourseListProps) => {
                 }
               }
 
-              return courseData.section.map((section, index) => (
+              return courseData?.section?.map((section, index) => (
                 <tr
                   className={
                     index % 2 === 0 ? "underline-normal" : "underline-dark"

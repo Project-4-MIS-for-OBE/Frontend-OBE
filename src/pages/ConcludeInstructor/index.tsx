@@ -20,8 +20,6 @@ const ConcludeInstructor: React.FC = () => {
     setChartVisible(!isChartVisible);
   };
 
-  const { EditScoreData, dataTable1, HeaderTableConclude } = useViewModel();
-
   return (
     <div>
       <Navbar />
@@ -48,11 +46,6 @@ const ConcludeInstructor: React.FC = () => {
             <div className="instructorConclude table1">
               <Table Header={HeaderTable1} Data={dataTable1} />
             </div>
-          </div>
-          <div className="tableContainer">
-            {EditScoreData && (
-              <Table Header={HeaderTableConclude} Data={dataTable1} />
-            )}
           </div>
           <div className="toggleconcludeChart" onClick={toggleChartVisibility}>
             <h6>แผนภาพสรุปผลการประเมินและจำนวนนักศึกษา</h6>

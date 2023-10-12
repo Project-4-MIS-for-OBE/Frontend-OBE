@@ -1,11 +1,17 @@
 import { Navbar } from "../../component/Navbar";
-
+import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
 import "./index.css";
+import useViewModel from "./viewModel";
 
 const ConcludeError = () => {
+  const { navigateToDashBoard } = useViewModel();
   return (
     <div>
       <Navbar />
+      <button className="backHomeNav" onClick={navigateToDashBoard}>
+        <ArrowBackIosRoundedIcon style={{ color: "#4F79BC", width: "16px" }} />
+        <p>ย้อนกลับ</p>
+      </button>
       <div className="menuFrame-container top">
         <div className="container-2">
           <h3>วิชา FullStack Development รหัสวิชา 26x497</h3>
