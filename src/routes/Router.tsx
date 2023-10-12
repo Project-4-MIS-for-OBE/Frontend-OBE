@@ -69,12 +69,12 @@ const Router = () => {
             <Route
               path={PROTECTED_PATH.EDIT_POINT}
               element={
-                // <ProtectRoute
-                // 	user={userInfo}
-                // 	redirectPath={UNPROTECTED_PATH.LOGIN}
-                // >
-                <EditUpdateCSO />
-                // </ProtectRoute>
+                <ProtectRoute
+                  user={userInfo}
+                  redirectPath={UNPROTECTED_PATH.LOGIN}
+                >
+                  <EditUpdateCSO />
+                </ProtectRoute>
               }
             />
           </Route>
