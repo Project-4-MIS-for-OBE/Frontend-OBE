@@ -1,17 +1,18 @@
+import { Link } from "react-router-dom";
 import "./index.css";
 const Login = () => {
 	return (
 		<div>
 			<div className="login">
-				<img src="./src/assets/logo.svg" className="OBE-logo" />
+				<img src="/logo.svg" className="OBE-logo" />
 				<h5>Log in to CPE OBE</h5>
-				<a
-					href={import.meta.env.VITE_APP_CMU_OAUTH_AUTHORIZE_URL}
+				<Link
+					to={import.meta.env.VITE_APP_CMU_OAUTH_AUTHORIZE_URL}
 					className="login-btn"
 				>
-					<img src="./src/assets/CMU SUB-LOGO.svg" />
+					<img src="/CMU SUB-LOGO.svg" />
 					<p>CMU Account</p>
-				</a>
+				</Link>
 			</div>
 			<div className="decoration-bg1"></div>
 			<div className="decoration-bg2"></div>

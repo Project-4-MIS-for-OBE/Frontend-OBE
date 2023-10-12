@@ -51,11 +51,11 @@ export const Navbar = () => {
       })} */}
 			<div className="navbar" onClick={handleLogout}>
 				<div className="navbar-topic">
-					<img src="./src/assets/logo.svg" className="CPEOBE-icon" />
+					<img src="/logo.svg" className="CPEOBE-icon" />
 					<h1>CPE OBE</h1>
 				</div>
 				<div className="navbarUsername">
-					<img src="./src/assets/profile.svg" className="userIcon" />
+					<img src="/profile.svg" className="userIcon" />
 
 					<div>
 						<h5>
