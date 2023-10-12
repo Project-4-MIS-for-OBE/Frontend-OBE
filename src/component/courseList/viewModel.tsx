@@ -9,10 +9,10 @@ const useViewModel = () => {
   const navigate = useNavigate();
 
   const navigateToEditPoint = () => {
-    navigate(PROTECTED_PATH.EDIT_POINT, { replace: true });
+    navigate(PROTECTED_PATH.EDIT_POINT, { replace: false });
   };
   const navigateToConcludeInstructor = () => {
-    navigate(PROTECTED_PATH.INSTRUCTOR_CONCLUDE, { replace: true });
+    navigate(PROTECTED_PATH.INSTRUCTOR_CONCLUDE, { replace: false });
   };
 
   const Status = (status: string) => {
