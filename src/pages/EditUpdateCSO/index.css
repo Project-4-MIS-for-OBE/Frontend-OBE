@@ -46,11 +46,8 @@
 .flex {
   display: flex;
 }
-.subject-icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #95afd7;
+.addeditscore-icon {
+  display: flex;
 }
 .edit.lineInTable {
   width: 100%;
@@ -61,36 +58,19 @@
   color: #636363;
 }
 .darkbutton {
-  border-radius: 5px;
-  background: #00175c;
-  border: unset;
-  padding: 5px 20px;
-
-  margin-left: auto;
-  margin-top: 10px;
-  margin-right: 60px;
-  width: fit-content;
-
-  transition: 0.3s;
+  display: flex;
+  width: 95%;
+  justify-content: end;
 }
-.darkbutton:hover {
-  background: #202e58;
-}
-.darkbutton p {
-  color: white;
-  margin: 0;
-  font-size: 13px;
-}
-
 .table1 {
   width: 90%;
   margin: auto;
 }
 .tableSO {
-  width: 48%;
+  width: 40%;
 }
 .table2 {
-  width: 48%;
+  width: 58%;
 }
 .container-table2 {
   display: flex;
@@ -101,4 +81,61 @@
 .table3 {
   margin: auto;
   width: 90%;
+}
+.DragDropZone {
+  text-align: center;
+  border-radius: 4px;
+  border: 1px dashed #454545;
+  background: #fff;
+
+  width: 90%;
+  padding: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+.DragDropZone.accept {
+  border-radius: 4px;
+  border: 1px dashed #454545;
+  background: #f5f5f5;
+  padding: 10px;
+  width: fit-content;
+}
+.DragDropZone.accept p {
+  color: black;
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 12px;
+}
+.DragDropZone button {
+  border-radius: 4px;
+  background: var(--l-hblue-5-l-hblue, #4f79bc);
+  color: white;
+
+  padding: 5px 25px;
+  line-height: normal;
+}
+.acceptfile {
+  display: flex;
+  gap: 8px;
+}
+.Toconclude {
+  margin-left: auto;
+  margin-right: 2rem;
+  display: flex;
+  border-radius: 5px;
+  background: #00175c;
+  border: unset;
+  padding: 5px 20px;
+
+  transition: 0.3s;
+  margin-top: 10px;
+}
+.Toconclude:hover {
+  background: #202e58;
+}
+.Toconclude p {
+  color: white;
+  margin: 0;
+  font-size: 13px;
 }

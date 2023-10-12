@@ -1,0 +1,84 @@
+.container-2 {
+  margin-left: auto;
+  margin-right: auto;
+
+  height: fit-content;
+  width: 90%;
+  background: white;
+  padding: 25px 30px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+}
+
+.topic-3 {
+  font-family: Prompt;
+  margin-left: auto;
+  margin-right: auto;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.topic-3 h6 {
+  display: flex;
+  justify-content: center; /* Center items vertically */
+  margin: 4px 0 0 15px;
+  font-size: 20px;
+}
+.DoughnutChart {
+  width: 30%;
+  display: flex;
+  margin: 40px auto auto auto;
+}
+
+.CSOnamechart {
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.CSOnamechart .CSO {
+  display: flex;
+  width: 50px;
+  height: 20px;
+  padding: 6px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  border-radius: 10px;
+  background: rgba(237, 242, 248, 1);
+}
+
+.CSOnamechart .CSO h4 {
+  color: #3f6196;
+  font-family: Prompt;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; /* 150% */
+  margin: auto;
+}
+
+.CSOnamechart p {
+  color: #000000;
+  font-family: Prompt;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 0px; /* 150% */
+  margin-left: 10px;
+}
+
+.tableContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 110px;
+}
+
+.so-2 {
+  margin: 0;
+}

@@ -1,10 +1,14 @@
 import { useEffect, useState } from "react";
 import EditScore from "../../data/EditScore.json";
+import CSOSelectedSO from "../../data/CSOselectedSO.json";
 import { useNavigate } from "react-router-dom";
 import { PROTECTED_PATH } from "../../constants/path.route";
 
 const useViewModel = () => {
   const [EditScoreData, setEditScoreData] = useState<any | undefined>(
+    undefined
+  );
+  const [CSOselectedSOData, setCSOselectedSOData] = useState<any | undefined>(
     undefined
   );
   const dataTable1 = EditScoreData?.CSOList.map((data: any) => [
@@ -14,10 +18,12 @@ const useViewModel = () => {
   const dataTableSO = EditScoreData?.SOList.map((data: any) => [
     [[data.detailTH]],
   ]);
-  const dataTable2 = EditScore?.CSOList.map((data: any) => [
+
+  const dataTable2 = CSOselectedSOData?.CSOList.map((data: any) => [
     [[data.objTH]],
-    [...Array(7).fill("0")],
+    data.selectedSO,
   ]);
+
   const dataTable3 = dataTable1?.map((dataItem: any) => [
     ...dataItem,
     ...Array(5).fill(["0"]),
@@ -108,6 +114,7 @@ const useViewModel = () => {
     const fetchData = async () => {
       try {
         setEditScoreData(EditScore);
+        setCSOselectedSOData(CSOSelectedSO);
       } catch (err) {
         console.error("err msg", err);
       }
@@ -119,6 +126,10 @@ const useViewModel = () => {
   const navigateToDashBoard = () => {
     navigate(PROTECTED_PATH.INSTRUCTOR_SUBJECT, { replace: false });
   };
+  const navigateToConcludeInstructor = () => {
+    navigate(PROTECTED_PATH.INSTRUCTOR_CONCLUDE, { replace: false });
+  };
+
   return {
     EditScoreData,
     dataTable1,
@@ -129,6 +140,7 @@ const useViewModel = () => {
     HeaderTable2,
     HeaderTable3,
     HeaderTableSO,
+    navigateToConcludeInstructor,
     navigateToDashBoard,
   };
 };
