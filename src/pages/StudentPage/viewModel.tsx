@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
-import EditScore from "../../data/EditScore.json";
+import concludeStudent from "../../data/concludeStudent.json";
 
 const useViewModel = () => {
-  const [EditScoreData, setEditScoreData] = useState<any | undefined>(
-    undefined
-  );
-  const dataTableSOstudent = EditScoreData?.SOList.map((data: any) => [
+  const [ConcludeStudentData, setConcludeStudentData] = useState<
+    any | undefined
+  >(undefined);
+  const dataTableSOstudent = ConcludeStudentData?.SOList.map((data: any) => [
     [[data.detailTH]],
+    data.StudentSoScore,
   ]);
 
   const HeaderTableSO = [
@@ -20,10 +21,6 @@ const useViewModel = () => {
       subTopic: undefined,
     },
     {
-      mainTopic: "CSO",
-      subTopic: undefined,
-    },
-    {
       mainTopic: "ผลการประเมินเฉลี่ยรวม",
       subTopic: undefined,
     },
@@ -32,7 +29,7 @@ const useViewModel = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        setEditScoreData(EditScore);
+        setConcludeStudentData(concludeStudent);
       } catch (err) {
         console.error("err msg", err);
       }

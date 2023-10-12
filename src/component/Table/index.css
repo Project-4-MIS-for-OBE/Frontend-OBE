@@ -53,6 +53,9 @@ input {
 .insideData td {
   border: unset;
 }
+.insideData.icon td {
+  vertical-align: middle;
+}
 .order {
   text-align: center;
   padding-top: 5px;
@@ -65,6 +68,13 @@ input {
 }
 .dataTD {
   padding: 5px 1.5rem;
+}
+.dataTD.icon {
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
 }
 .dataTD input {
   width: 100%;

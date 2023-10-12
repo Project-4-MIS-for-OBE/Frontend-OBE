@@ -1,0 +1,46 @@
+{
+  "SOList": [
+    {
+      "detailEN": "An ability to identify, formulate, and solve complex engineering problems by applying principles of engineering, sciences, and mathematics.",
+      "detailTH": "ความสามารถในการบ่งชี้ ตั้งโจทย์ และแก้ปัญหาทางวิศวกรรมที่มีความซับซ้อนโดยประยุกต์ใช้ความรู้ในทางวิศวกรรมศาสตร์ วิทยาศาสตร์ และคณิตศาสตร์",
+      "CSOSelected": ["CSO2", "CSO3"],
+      "evaluationResults": [3.7, 1.9]
+    },
+    {
+      "detailEN": "An ability to apply engineering design to produce solutions that meet specified needs with consideration of public health, safety, and welfare, as well as global, cultural, social, environmental, and economic factors.",
+      "detailTH": "ความสามารถในการประยุกต์ใช้การออกแบบเชิงวิศวกรรมในการแก้ปัญหาเพื่อตอบสนองต่อความต้องการที่เฉพาะเจาะจงโดยมีการพิจารณาถึงสาธารณสุข ความปลอดภัย และสวัสดิภาพ รวมถึงปัจจัยที่ส่งผลต่อโลก วัฒนธรรม สังคม สิ่งแวดล้อม และเศรษฐศาสตร์",
+      "CSOSelected": [],
+      "evaluationResults": []
+    },
+    {
+      "detailEN": "An ability to communication effectively with a range of audiences.",
+      "detailTH": "ความสามารถในการสื่อสารอย่างมีประสิทธิผลกับผู้รับสารที่หลากหลาย",
+      "CSOSelected": [],
+      "evaluationResults": []
+    },
+    {
+      "detailEN": "An ability to recognize ethical and professional responsibilities in engineering situations and make informed judgments, which must consider the impact of engineering solutions in global, economics, environmental, and societal contexts.",
+      "detailTH": "ความสามารถในรับรู้ถึงหลักจริยธรรมและความรับผิดชอบเชิงวิชาชีพในสถานการณ์ทางวิศวกรรมและตัดสินอย่างชาญฉลาดโดยพิจารณาถึงผลกระทบของการแก้ปัญหาทางวิศวกรรมที่ส่งผลต่อบริบทของโลก เศรษฐกิจ สิ่งแวดล้อม และสังคม",
+      "CSOSelected": [],
+      "evaluationResults": []
+    },
+    {
+      "detailEN": "An ability to function effectively on a team whose members together provide leadership, create a collaborative and inclusive environment, establish goals plan tasks, and meet objectives.",
+      "detailTH": "ความสามารถในการทำงานอย่างมีประสิทธิภาพร่วมกับทีมงานที่สมาชิกร่วมกันให้ความเป็นผู้นำสร้างการประสานงานและสภาพแวดล้อมที่มีการหลอมรวมสร้างภาระหน้าที่ที่มุ่งเป้าหมายอย่างมีแผนงานและบรรลุวัตถุประสงค์",
+      "CSOSelected": ["CSO2", "CSO3"],
+      "evaluationResults": [3.7, 1.9]
+    },
+    {
+      "detailEN": "An ability to develop and conduct appropriate experimentation, analyze, and interpret data, and use engineering judgment to draw conclusions.",
+      "detailTH": "ความสามารถในการพัฒนาและทำการทดลอง วิเคราะห์ และแปลความหมายข้อมูล รวมถึงการใช้การตัดสินเชิงวิศวกรรมในการสรุปผล",
+      "CSOSelected": [],
+      "evaluationResults": []
+    },
+    {
+      "detailEN": "An ability to acquire and apply new knowledge as needed, using appropriate learning strategies.",
+      "detailTH": "มีความสามารถในการแสวงหาและประยุกต์ใช้องค์ความรู้ใหม่ๆที่จำเป็นด้วยกลยุทธ์การเรียนรู้ที่เหมาะสม",
+      "CSOSelected": ["CSO1"],
+      "evaluationResults": [2.05]
+    }
+  ]
+}

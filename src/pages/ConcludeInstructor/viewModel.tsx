@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EditScore from "../../data/EditScore.json";
+import concludeData from "../../data/concludeInstructor.json";
 import { useNavigate } from "react-router-dom";
 import { PROTECTED_PATH } from "../../constants/path.route";
 
@@ -7,25 +8,19 @@ const useViewModel = () => {
   const [EditScoreData, setEditScoreData] = useState<any | undefined>(
     undefined
   );
+  const [ConcludeSOData, setConcludeSOData] = useState<any | undefined>(
+    undefined
+  );
   const dataTable1 = EditScoreData?.CSOList.map((data: any) => [
     [[data.objTH]],
     data.scoreTopicList,
     data.evaluationResults,
   ]);
-  const dataTableSO = EditScoreData?.SOList.map(
-    (soData: any, soIndex: number) => {
-      const csoData = EditScoreData?.CSOList.map(
-        (csoItem: any, csoIndex: number) => {
-          if (csoItem.selectedSO.includes(soIndex + 1)) {
-            return [[`CSO ${soIndex + 1}`], [...csoItem.evaluationResults]];
-          } else {
-          }
-        }
-      );
-
-      return [[[soData.detailTH]], ...csoData.flat()];
-    }
-  );
+  const dataTableSO = ConcludeSOData?.SOList?.map((data: any) => [
+    [[data.detailTH]],
+    data.CSOSelected,
+    data.evaluationResults,
+  ]);
 
   console.log(dataTableSO);
   const HeaderTable1 = [
@@ -70,6 +65,7 @@ const useViewModel = () => {
     const fetchData = async () => {
       try {
         setEditScoreData(EditScore);
+        setConcludeSOData(concludeData);
       } catch (err) {
         console.error("err msg", err);
       }
