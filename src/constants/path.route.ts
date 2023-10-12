@@ -1,7 +1,6 @@
 export enum UNPROTECTED_PATH {
-  LOGIN = "/",
-  PRIVACY = "/privacy-policy",
-  OAUTH_REDIRECT = "/callback",
+	LOGIN = "/",
+	OAUTH_REDIRECT = "/cmuOAuthCallback",
 }
 
 export enum PROTECTED_PATH {
