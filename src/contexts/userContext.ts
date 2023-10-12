@@ -1,14 +1,14 @@
-import { createContext, useContext } from "react";
+import { createContext } from "react";
 import { CmuOAuthBasicInfo } from "../types";
 
 type TUserInfoCtx = {
-	userInfo: CmuOAuthBasicInfo | null;
-	setUserInfo: React.Dispatch<React.SetStateAction<CmuOAuthBasicInfo | null>>;
+  userInfo: CmuOAuthBasicInfo | null;
+  setUserInfo: React.Dispatch<React.SetStateAction<CmuOAuthBasicInfo | null>>;
 };
 
 const UserInfoContext = createContext<TUserInfoCtx>({
-	userInfo: null,
-	setUserInfo: () => null,
+  userInfo: null,
+  setUserInfo: () => null,
 });
 
 export default UserInfoContext;

@@ -1,0 +1,19 @@
+{
+  "CSOList": [
+    {
+      "objEN": "Able to describe how web application technology works",
+      "objTH": "อธิบายหลักการทำงานของเว็บแอพพลิเคชันและการสื่อสารที่เกี่ยวข้อง",
+      "selectedSO": ["0", "0", "0", "0", "0", "0", "1"]
+    },
+    {
+      "objEN": "Able to develop a web application using software framework",
+      "objTH": "พัฒนาเว็บแอพพลิเคชันด้วยเฟรมเวิร์คด้านซอฟต์แวร์ได้",
+      "selectedSO": ["1", "0", "0", "0", "1", "0", "0"]
+    },
+    {
+      "objEN": "Able to develop data service using software framework",
+      "objTH": "พัฒนาบริการข้อมูลเบื้องหลังด้วยเฟรมเวิร์คด้านซอฟต์แวร์ได้",
+      "selectedSO": ["1", "0", "0", "0", "1", "0", "0"]
+    }
+  ]
+}
