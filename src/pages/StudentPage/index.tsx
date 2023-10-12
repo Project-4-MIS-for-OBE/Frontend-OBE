@@ -1,12 +1,15 @@
 import { Navbar } from "../../component/Navbar";
 import { Chart } from "../../component/RadarChart";
+import Table from "../../component/Table";
+import useViewModel from "./viewModel";
 import "./index.css";
 
 const StudentPage = () => {
+  const { dataTableSOstudent, HeaderTableSO } = useViewModel();
   return (
     <div>
       <Navbar />
-      <div className="menuFrame-container top">
+      <div className="student menuFrame-container top">
         <div className="container-2">
           <h3>สรุปผลคะแนนประเมินวัตถุประสงค์การเรียนรู้ (SO)</h3>
           <div className="topic-2">
@@ -19,30 +22,12 @@ const StudentPage = () => {
             <h6>สรุปคะแนนประเมินวัตถุประสงค์การเรียนรูั (SO) รวมทุกวิชา </h6>
           </div>
 
-          <div className="tableContainer">
-            <table>
-              <thead>
-                <tr>
-                  <th className="centered">ลำดับ</th>
-                  <th className="leftSide headerTableBorder">
-                    คำอธิบายวัตถุประสงค์การเรียนรู้ของนักศึกษา (SO : Student
-                    Outcomes)
-                  </th>
-
-                  <th className="centered">ผลการประเมิน</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="underline-normal"></tr>
-              </tbody>
-            </table>
+          <div>
+            <Table Header={HeaderTableSO} Data={dataTableSOstudent} />
             <div className="chart">
               <Chart />
             </div>
           </div>
-        </div>
-        <div className="container">
-          <h6>สรุปคะแนนประเมินวัตถุประสงค์การเรียนรูั (SO) รวมทุกวิชา </h6>
         </div>
       </div>
     </div>

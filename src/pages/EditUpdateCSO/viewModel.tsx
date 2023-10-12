@@ -14,9 +14,15 @@ const useViewModel = () => {
   const dataTableSO = EditScoreData?.SOList.map((data: any) => [
     [[data.detailTH]],
   ]);
-  const dataTable2 = EditScore?.CSOList.map((data: any) => [
+  const subDataforTable2: string[] | string[][] = [
+    ["0", "0", "0", "0", "0", "0", "1"],
+    ["1", "0", "0", "0", "1", "0", "0"],
+    ["1", "0", "0", "0", "1", "0", "0"],
+  ];
+
+  const dataTable2 = EditScore?.CSOList.map((data: any, index: any) => [
     [[data.objTH]],
-    [...Array(7).fill("0")],
+    subDataforTable2[index],
   ]);
   const dataTable3 = dataTable1?.map((dataItem: any) => [
     ...dataItem,
@@ -119,6 +125,10 @@ const useViewModel = () => {
   const navigateToDashBoard = () => {
     navigate(PROTECTED_PATH.INSTRUCTOR_SUBJECT, { replace: false });
   };
+  const navigateToConcludeInstructor = () => {
+    navigate(PROTECTED_PATH.INSTRUCTOR_CONCLUDE, { replace: false });
+  };
+
   return {
     EditScoreData,
     dataTable1,
@@ -129,6 +139,7 @@ const useViewModel = () => {
     HeaderTable2,
     HeaderTable3,
     HeaderTableSO,
+    navigateToConcludeInstructor,
     navigateToDashBoard,
   };
 };

@@ -5,6 +5,9 @@ table {
 input {
   z-index: -1;
 }
+.tableContainerComponent table {
+  width: 100%;
+}
 .tableContainerComponent {
   width: 100%;
   background: white;
@@ -20,11 +23,8 @@ input {
   padding: 0px 15px;
   border: 2px solid white;
 }
-.insideTable.headerTH th {
-  border-left: unset;
-  border-right: unset;
-  border-bottom: unset;
-  transform: translateY(-1px);
+.insideTable th {
+  border: unset;
 }
 .headerTH table {
   width: 100%;
@@ -43,7 +43,6 @@ input {
   padding: 0;
   transform: translateY(-1px);
 }
-
 .insideDataContianer table {
   width: 100%;
   border-top: 1px solid #d9d9d9;
@@ -53,6 +52,9 @@ input {
 }
 .insideData td {
   border: unset;
+}
+.insideData.icon td {
+  vertical-align: middle;
 }
 .order {
   text-align: center;
@@ -66,4 +68,19 @@ input {
 }
 .dataTD {
   padding: 5px 1.5rem;
+}
+.dataTD.icon {
+  padding-top: 10px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+.dataTD input {
+  width: 100%;
+  border: 1px solid #d9d9d9;
+}
+.dataTD input:focus {
+  outline: none !important;
+  border: 1px solid #767676;
 }

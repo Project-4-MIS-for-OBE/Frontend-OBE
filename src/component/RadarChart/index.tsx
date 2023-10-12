@@ -1,5 +1,4 @@
 /*install package.json before use*/
-import React from "react";
 import {
   Chart as ChartJS,
   RadialLinearScale,
