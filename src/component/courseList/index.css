@@ -27,13 +27,14 @@
   background: #95afd7;
 }
 
-.tableContainer {
+.CourseListContainer {
+  z-index: 1;
   width: 100%;
 }
-.tableContainer thead {
+.CourseListContainer thead {
   background: #edf2f8;
 }
-.tableContainer th {
+.CourseListContainer th {
   color: #4f79bc;
   font-family: Prompt;
   font-size: 13px;
@@ -42,20 +43,20 @@
   line-height: 30px;
   padding: 0px 15px;
 }
-.tableContainer table {
+.CourseListContainer table {
   border-collapse: collapse;
   width: 100%;
 }
-.tableContainer th.centered {
+.CourseListContainer th.centered {
   text-align: center;
 }
-.tableContainer th.leftSide {
+.CourseListContainer th.leftSide {
   text-align: left;
 }
-.tableContainer th.rightSide {
+.CourseListContainer th.rightSide {
   text-align: right;
 }
-.tableContainer td {
+.CourseListContainer td {
   color: #040408;
   font-family: Prompt;
   font-size: 14px;
@@ -64,20 +65,20 @@
   line-height: 25.5px;
   padding: 15px 15px;
 }
-.tableContainer td.centered {
+.CourseListContainer td.centered {
   text-align: center;
 }
-.tableContainer td.leftSide {
+.CourseListContainer td.leftSide {
   text-align: left;
 }
-.tableContainer td.rightSide {
+.CourseListContainer td.rightSide {
   text-align: right;
   width: 165px;
 }
-.tableContainer tr.underline-normal {
+.CourseListContainer tr.underline-normal {
   border-bottom: 1px solid var(--white-2-gray, #f5f5f5);
 }
-.tableContainer tr.underline-dark {
+.CourseListContainer tr.underline-dark {
   border-bottom: 1px solid var(--white-7-gray, #bcbcbc);
 }
 .filter {

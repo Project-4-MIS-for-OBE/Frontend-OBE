@@ -97,7 +97,7 @@ const CourseList = ({ data, instructor, status }: CourseListProps) => {
           />
         </div>
       </div>
-      <div className="tableContainer">
+      <div className="CourseListContainer">
         <table>
           <thead>
             <tr>
