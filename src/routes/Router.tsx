@@ -6,6 +6,7 @@ import Dashboard from "../pages/Dashboard";
 import EditUpdateCSO from "../pages/EditUpdateCSO";
 import ConcludeInstructor from "../pages/ConcludeInstructor";
 import StudentPage from "../pages/StudentPage";
+import ConcludeError from "../pages/ConcludeError";
 const Router = () => {
   return (
     <>
@@ -40,6 +41,13 @@ const Router = () => {
             <Route
               path={PROTECTED_PATH.STUDENT_CONCLUDE}
               element={<StudentPage />}
+            />
+          </Route>
+
+          <Route>
+            <Route
+              path={PROTECTED_PATH.ERROR_CONCLUDE}
+              element={<ConcludeError />}
             />
           </Route>
         </Routes>

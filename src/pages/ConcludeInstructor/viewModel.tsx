@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import EditScore from "../../data/EditScore.json";
+
 import concludeData from "../../data/concludeInstructor.json";
 import { useNavigate } from "react-router-dom";
 import { PROTECTED_PATH } from "../../constants/path.route";
@@ -8,6 +9,7 @@ const useViewModel = () => {
   const [EditScoreData, setEditScoreData] = useState<any | undefined>(
     undefined
   );
+
   const [ConcludeSOData, setConcludeSOData] = useState<any | undefined>(
     undefined
   );
@@ -21,8 +23,6 @@ const useViewModel = () => {
     data.CSOSelected,
     data.evaluationResults,
   ]);
-
-  console.log(dataTableSO);
   const HeaderTable1 = [
     {
       mainTopic: "ลำดับ",
@@ -37,6 +37,7 @@ const useViewModel = () => {
       subTopic: undefined,
     },
     {
+
       mainTopic: "ผลการประเมิน",
       subTopic: undefined,
     },
@@ -51,6 +52,7 @@ const useViewModel = () => {
         "คำอธิบายวัตถุประสงค์การเรียนรู้ของนักศึกษา (SO : Student outcomes)",
       subTopic: undefined,
     },
+
     {
       mainTopic: "CSO",
       subTopic: undefined,
@@ -72,6 +74,7 @@ const useViewModel = () => {
     };
     fetchData();
   });
+
   const navigate = useNavigate();
 
   const navigateToDashBoard = () => {

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Navbar } from "../../component/Navbar";
 import { DoughnutChart } from "../../component/Doughnut";
+
 import useViewModel from "./viewModel";
 import Table from "../../component/Table";
 import ArrowBackIosRoundedIcon from "@mui/icons-material/ArrowBackIosRounded";
@@ -18,6 +19,8 @@ const ConcludeInstructor: React.FC = () => {
   const toggleChartVisibility = () => {
     setChartVisible(!isChartVisible);
   };
+
+  const { EditScoreData, dataTable1, HeaderTableConclude } = useViewModel();
 
   return (
     <div>
@@ -45,6 +48,11 @@ const ConcludeInstructor: React.FC = () => {
             <div className="instructorConclude table1">
               <Table Header={HeaderTable1} Data={dataTable1} />
             </div>
+          </div>
+          <div className="tableContainer">
+            {EditScoreData && (
+              <Table Header={HeaderTableConclude} Data={dataTable1} />
+            )}
           </div>
           <div className="toggleconcludeChart" onClick={toggleChartVisibility}>
             <h6>แผนภาพสรุปผลการประเมินและจำนวนนักศึกษา</h6>
