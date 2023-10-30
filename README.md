@@ -1,3 +1,16 @@
 # Frontend-OBE
+STAGING : https://frontend-obe.vercel.app/
+## Starter command
+for install package
 
-STAGING : 
+      npm install
+  
+for running 
+
+      npm run dev
+     
+
+## Technology stack
+-   vite
+-   react
+-   typescript
